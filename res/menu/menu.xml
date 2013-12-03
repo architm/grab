@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+<item android:title="About Us"
+      android:id="@+id/aboutus"
+      android:icon="@drawable/about"
+ />
+
+<item android:title="Exit"
+      android:id="@+id/exit" 
+
+     />
+      
+<item android:title="Bookmarks"
+      android:id="@+id/bookmark"    android:icon="@drawable/bookmark"
+      />
+
+<item android:title="History"
+      android:id="@+id/history" 
+ />
+
+<item android:title="Settings"
+      android:id="@+id/setting"
+         android:icon="@drawable/setting" />
+
+<item android:title="More"
+      android:id="@+id/more"
+         android:icon="@drawable/more" />
+<item android:id="@+id/add_ges" android:title="Create Gesture"></item>
+ 
+</menu>

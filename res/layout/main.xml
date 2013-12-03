@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!--
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="9" 
+           android:drawableRight="@drawable/search">
+           
+        </EditText>
+
+        <ImageButton
+            android:id="@+id/ibBookmark"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@android:color/transparent"
+            android:src="@drawable/star" />
+    </LinearLayout>
+    -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="9"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/etSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Enter URL"
+                android:singleLine="true"
+                android:textStyle="normal" >
+            </EditText>
+
+            <Button
+                android:id="@+id/bSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:background="@drawable/search" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/ibBookmark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:background="@android:color/transparent"
+                android:src="@drawable/star" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:background="@android:color/darker_gray" >
+
+        <ImageView
+            android:id="@+id/previous"
+            android:layout_width="10dp"
+            android:layout_height="14dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/left" />
+
+        <ImageView
+            android:id="@+id/next"
+            android:layout_width="10dp"
+            android:layout_height="14dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/ibNewTab"
+            android:src="@drawable/right" />
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScroll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_toLeftOf="@+id/ibNewTab"
+            android:layout_toRightOf="@id/previous"
+            android:fadingEdgeLength="30dp"
+            android:scrollbars="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/home_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/tabx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/tab" >
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="80dp"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="HomePage"
+                        android:textColor="@android:color/black" />
+
+                    <ImageButton
+                        android:id="@+id/cancel1"
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/cancel_transitions" />
+                </LinearLayout>
+
+                <!--
+            <Button
+                android:id="@+id/btn_home"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:drawableRight="@drawable/cancel"
+                android:focusable="true"
+                android:tag="-1"
+                android:text="Tab1"
+                android:textColor="#FFFFFF" />
+            
+             <Button android:id="@+id/btn_home" 
+                android:layout_height="35dp" android:layout_width="100dp" android:focusable="true"
+               android:text="Tab2" android:textColor="#FFFFFF" android:tag="-1"/>
+            <Button android:id="@+id/btn_home" android:background="@android:color/background_dark"
+                android:layout_height="35dp" android:layout_width="100dp" android:focusable="true"
+               android:text="Tab3" android:textColor="#FFFFFF" android:tag="-1"/>
+            <Button android:id="@+id/btn_home" android:background="@android:color/background_dark"
+                android:layout_height="35dp" android:layout_width="100dp" android:focusable="true"
+                 android:text="Tab4" android:textColor="#FFFFFF" android:tag="-1"/>
+            <Button android:id="@+id/btn_home" android:background="@android:color/background_dark"
+                android:layout_height="35dp" android:layout_width="100dp" android:focusable="true"
+                android:text="Tab5" android:textColor="#FFFFFF" android:tag="-1"/> 		
+                -->
+                <!-- More are added dynamically -->
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <ImageButton
+            android:id="@+id/ibNewTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/new_tab" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/webSpace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="9"
+        android:orientation="vertical" >
+
+        <WebView
+            android:id="@+id/wvx"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/ibBackward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/background_light"
+            android:src="@drawable/beck_transition" />
+
+        <ImageButton
+            android:id="@+id/ibRefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/background_light"
+            android:src="@drawable/refresh_transition" />
+
+        <ImageButton
+            android:id="@+id/ibHomepage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/background_light"
+            android:src="@drawable/home_transition" />
+
+        <ImageButton
+            android:id="@+id/ibForward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/background_light"
+            android:src="@drawable/forward_transition" />
+    </LinearLayout>
+
+</LinearLayout>

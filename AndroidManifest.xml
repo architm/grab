@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.Fast"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:icon="@drawable/cheetah"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".Splash"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FastBrowserActivity"
+            android:label="@string/app_name" 
+            android:windowSoftInputMode="adjustPan"
+            >
+            <intent-filter>
+                <action android:name="com.Fast.FASTBROWSERACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+       
+        <activity
+            android:name=".SendBookmarks"
+            android:label="Send Bookmarks" >
+            <intent-filter>
+                <action android:name="com.Fast.SENDBOOKMARKS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name=".History"
+            android:label="History" >
+            <intent-filter>
+                <action android:name="com.Fast.HISTORY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name=".GestureActivity"
+            android:label="Open URL with Gestures!!" >
+            <intent-filter>
+                <action android:name="com.Fast.GESTUREACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Register"
+            android:label="Register your Mobile" >
+            <intent-filter>
+                <action android:name="com.Fast.REGISTER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Settings"
+            android:label="Settings" >
+            <intent-filter>
+                <action android:name="com.Fast.SETTINGS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+          <activity
+            android:name=".GestureBuilderActivity"
+            android:label="Gesture Building" >
+            <intent-filter>
+                <action android:name="com.Fast.GESTUREBUILDERACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Bookmarks"
+            android:label="list of bookmarks" >
+            <intent-filter>
+                <action android:name="com.Fast.BOOKMARKS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".aboutus"
+            android:label="About Us" >
+            <intent-filter>
+                <action android:name="com.Fast.ABOUTUS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CreateGestureActivity"
+            android:label="Create Gesture" >
+            <intent-filter>
+                <action android:name="com.Fast.CREATEGESTUREACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

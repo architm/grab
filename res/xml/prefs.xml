@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory android:title="Page Content Settings" >
+        
+
+    <EditTextPreference 
+     android:key="homepage"
+     android:title="Set Home Page"
+     android:summary="Present home page"        
+        />
+    <CheckBoxPreference
+        android:key="javaSC"
+        android:title="Enable JavaScript"
+        android:defaultValue="true"
+        />
+    <CheckBoxPreference
+        android:key="popUP"
+        android:title="Block POP-UP Window"
+        android:defaultValue="true"
+        />
+    <CheckBoxPreference
+        android:key="loadIM"
+        android:title="Load Images"
+        android:defaultValue="true"
+        />
+
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="Privacy Settings" >
+   
+    <CheckBoxPreference
+        android:key="history"
+        android:title="Save History"
+         android:defaultValue="true"
+        />
+    </PreferenceCategory>
+
+</PreferenceScreen>
